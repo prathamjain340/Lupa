@@ -21,6 +21,23 @@ raw for programmatic access via .to_json().
 middle-ground number. P90 and P99 are preserved in raw["latency"]
 for users who care about tail latency behavior.
 
+## ADR-006 — Evaluator owns the pipeline call loop, metrics receive cached outputs
+**Decision:** evaluator.py calls pipeline_fn once per example,
+records wall-clock time, caches (chunks, answer). Latency metric
+receives pre-collected durations. All other metrics receive cached
+(chunks, answer) outputs.
+**Reason:** Option B (each metric calls pipeline_fn independently)
+multiplies API costs and wall-clock time by the number of metrics.
+A pipeline with 4 metrics would make 4x LLM API calls per example.
+Option A makes exactly one call per example regardless of how many
+metrics are requested.
+
+## ADR-005 — Latency uses time.perf_counter not time.time
+**Decision:** Wall-clock timing uses time.perf_counter().
+**Reason:** perf_counter is monotonic (never goes backwards) and
+has higher resolution than time.time(). time.time() can jump
+backward on clock adjustments, corrupting latency measurements.
+
 ## ADR-004 — retrieval_precision per-example entries include retrieved chunks
 **Decision:** Each per-example entry stores query, score,
 retrieved_chunks (full in raw/JSON), and relevant_doc_ids from
