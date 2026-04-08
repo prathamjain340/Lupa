@@ -21,6 +21,15 @@ raw for programmatic access via .to_json().
 middle-ground number. P90 and P99 are preserved in raw["latency"]
 for users who care about tail latency behavior.
 
+## ADR-008 — retrieval_precision uses all-MiniLM-L6-v2 via models/loader.py
+**Decision:** Embedding model loaded through get_embedding_model()
+in models/loader.py, not instantiated inline in retrieval.py.
+Model: all-MiniLM-L6-v2 — small (80MB), fast on CPU, sufficient
+for semantic similarity scoring.
+**Reason:** Centralising model loading means the model name is
+configured in one place. Lazy loading means the 80MB download
+only happens when retrieval_precision is first used, not on import.
+
 ## ADR-007 — loader uses importlib.resources not __file__
 **Decision:** Built-in dataset files located via importlib.resources.
 **Reason:** __file__ path construction breaks when the package is
