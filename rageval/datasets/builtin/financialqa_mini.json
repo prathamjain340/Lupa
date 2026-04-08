@@ -1,0 +1,192 @@
+[
+  {
+    "query": "What was Apple's total revenue in Q3 2023?",
+    "ground_truth_answer": "Apple reported total revenue of $81.8 billion in Q3 2023, down 1% year over year.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Apple Inc. today announced financial results for its fiscal 2023 third quarter ended July 1, 2023. The Company posted quarterly revenue of $81.8 billion, down 1 percent year over year, and quarterly earnings per diluted share of $1.26, up 5 percent year over year. Services revenue reached an all-time high of $21.2 billion during the quarter.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "Apple reported fiscal Q2 2023 revenue of $94.8 billion, representing a 3% decline year over year. iPhone revenue was $51.3 billion, while Services revenue reached $20.9 billion, an all-time record at that time.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "For the full fiscal year 2022, Apple reported annual revenue of $394.3 billion, an increase of 8% compared to fiscal year 2021. The company saw strong growth across iPhone, Mac, and Services segments.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Microsoft's Intelligent Cloud revenue in Q4 fiscal 2023?",
+    "ground_truth_answer": "Microsoft's Intelligent Cloud revenue was $24.0 billion in Q4 fiscal 2023, an increase of 15% year over year.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Microsoft today announced the following results for the quarter ended June 30, 2023. Revenue in Intelligent Cloud was $24.0 billion and increased 15% year over year, with server products and cloud services revenue increasing 17%, driven by Azure and other cloud services revenue growth of 26%. Total company revenue was $56.2 billion, up 8% year over year.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "For the full fiscal year 2023, Microsoft reported total revenue of $211.9 billion, up 7% year over year. Annual Intelligent Cloud revenue grew to approximately $87.9 billion for the fiscal year, reflecting the company's continued momentum in cloud services.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Microsoft reported Q4 fiscal 2023 total company revenue of $56.2 billion. Operating income for the quarter was $24.3 billion, an increase of 18% year over year. Net income was $20.1 billion, up 20% from the prior year period.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Amazon's total operating income in Q1 2023?",
+    "ground_truth_answer": "Amazon's total operating income in Q1 2023 was $4.8 billion, compared with $3.7 billion in Q1 2022.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Amazon.com today announced financial results for its first quarter ended March 31, 2023. Net sales increased 9% to $127.4 billion. Operating income increased to $4.8 billion in the first quarter, compared with $3.7 billion in first quarter 2022. First quarter 2023 operating income includes approximately $0.5 billion of charges related to estimated severance costs.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "In Q1 2024, Amazon reported operating income of $15.3 billion, compared with operating income of $4.8 billion in Q1 2023. AWS segment operating income was $9.4 billion in Q1 2024, up from $5.1 billion in the year-ago quarter.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Amazon Q1 2023 net sales increased 9% to $127.4 billion compared with $116.4 billion in Q1 2022. AWS segment sales increased 16% year over year to $21.4 billion. North America segment sales increased 11% year over year to $76.9 billion.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "How many employees did Meta have at the end of 2022?",
+    "ground_truth_answer": "Meta had 86,482 employees as of December 31, 2022, an increase of 20% year over year.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Meta Platforms today reported fourth quarter and full year 2022 financial results. Headcount was 86,482 as of December 31, 2022, an increase of 20% year-over-year. The reported headcount includes a substantial majority of the approximately 11,000 employees impacted by the layoff announced in November 2022, who would no longer be reflected in headcount by end of Q1 2023.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "Meta reported headcount of 71,469 as of June 30, 2023, a decrease of 14% year-over-year, as the company's year of efficiency drove substantial workforce reductions. Approximately half of the employees impacted by the 2023 layoffs are included in this reported headcount figure.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Meta Platforms announced in November 2022 that it would reduce its workforce by approximately 13% or about 11,000 employees. The company cited a need to cut costs and refocus on its core business priorities including the metaverse and AI investments as reasons for the layoffs.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Alphabet's operating income in Q2 2023?",
+    "ground_truth_answer": "Alphabet reported operating income of $21.8 billion in Q2 2023, with an operating margin of 29%.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Alphabet Inc. today announced financial results for the quarter ended June 30, 2023. Total revenues were $74.6 billion, up 7% year over year. Operating income was $21.8 billion with an operating margin of 29%. Net income was $18.4 billion and diluted EPS was $1.44. The company had 174,014 employees at the end of the quarter.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "In Q2 2022, Alphabet reported revenues of $69.7 billion, up 13% year over year. Operating income was $19.5 billion with an operating margin of 28%. Net income was $16.0 billion. The company employed 174,014 full-time workers as of June 30, 2022.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Alphabet Q2 2023 revenues were $74.6 billion. Google Services operating income was $22.8 billion. Google Cloud operating loss narrowed to $813 million, reflecting continued investment in infrastructure. Other Bets recorded an operating loss of $813 million for the quarter.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "How many paid streaming memberships did Netflix have at the end of Q1 2023?",
+    "ground_truth_answer": "Netflix had 232.50 million global streaming paid memberships at the end of Q1 2023, adding 1.75 million net paid subscribers in the quarter.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Netflix reported first quarter 2023 results with global streaming paid memberships of 232.50 million as of March 31, 2023. Paid net additions were 1.75 million for Q1, compared to a loss of 0.20 million in Q1 2022. Revenue for the quarter was $8.16 billion, up 3.7% year over year. Operating income was $1.7 billion with an operating margin of 21%.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "Netflix ended Q2 2023 with 238.39 million global streaming paid memberships, adding 5.89 million net paid subscribers in the quarter. This strong growth was driven by the rollout of the paid sharing initiative, which converted password-sharing households into paying accounts.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Netflix Q1 2023 revenue was $8.16 billion, up 3.7% year over year. Operating income totaled $1.7 billion compared to $2.0 billion in Q1 2022. The year-over-year decline in operating margin from 25% to 21% was driven by content investment timing and ongoing spending on original programming.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Tesla's total vehicle delivery count in Q2 2023?",
+    "ground_truth_answer": "Tesla delivered 466,140 total vehicles in Q2 2023, including 446,915 Model 3/Y and 19,225 Model S/X vehicles.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "In the second quarter of 2023, Tesla produced nearly 480,000 vehicles and delivered over 466,000 vehicles. Total deliveries were 466,140, consisting of 446,915 Model 3/Y and 19,225 Model S/X vehicles. Total production was 479,700 vehicles, representing an 86% increase year over year.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "Tesla Q2 2023 total production was 479,700 vehicles, consisting of 460,211 Model 3/Y units and 19,489 Model S/X units. The production figure represented a significant increase compared to the 365,923 vehicles produced in Q2 2022.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "In Q1 2023, Tesla delivered 422,875 total vehicles, consisting of 412,180 Model 3/Y and 10,695 Model S/X deliveries. Production for Q1 2023 was 440,808 vehicles, slightly ahead of deliveries, resulting in some vehicle inventory build.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Nvidia's Data Center revenue in fiscal Q1 2024?",
+    "ground_truth_answer": "Nvidia reported Data Center revenue of $4.28 billion in fiscal Q1 2024, a record quarter up 14% from a year ago and up 18% sequentially.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "NVIDIA reported revenue for the first quarter of fiscal 2024 ended April 30, 2023, of $7.19 billion. Data Center revenue was a record $4.28 billion, up 14% from a year ago and up 18% sequentially, led by growing demand for generative AI and large language models. The revenue growth reflected strong demand from large consumer internet companies and cloud service providers.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "Nvidia fiscal Q1 2024 total revenue was $7.19 billion, down 13% from a year ago but up 19% from the previous quarter. GAAP gross margin was 64.6%, up 1.3 percentage points sequentially. GAAP diluted earnings per share were $0.82, up 44% from the previous quarter.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "In fiscal Q1 2025, Nvidia reported record Data Center revenue of $22.6 billion, up 427% from a year ago and up 23% sequentially. This dramatic acceleration was driven by unprecedented demand for NVIDIA Hopper GPU computing platforms for AI training and inference workloads.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was JPMorgan Chase's net income in Q3 2023?",
+    "ground_truth_answer": "JPMorgan Chase reported net income of $13.2 billion, or $4.33 per share, in the third quarter of 2023.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "JPMorgan Chase today reported third-quarter 2023 net income of $13.2 billion, or $4.33 per share. Revenue in the Consumer and Business Banking segment remained strong, driven by deposit growth. Commercial Banking Payments revenue was up 30% year over year, and Asset and Wealth Management saw AUM net inflows of $60 billion.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "JPMorgan Chase Q3 2023 net revenue was approximately $39.9 billion, representing strong growth versus the prior year period. The Consumer and Community Banking segment contributed substantially to revenue growth driven by higher interest rates, which boosted net interest income across the firm.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "JPMorgan Chase reported Q2 2023 net income of $14.5 billion, or $4.75 per share. The result included a $2.7 billion gain related to Visa shares and approximately $1.5 billion benefit from the First Republic Bank acquisition, which closed in May 2023.",
+        "is_distractor": true
+      }
+    }
+  },
+  {
+    "query": "What was Microsoft's total company revenue in Q4 fiscal 2023?",
+    "ground_truth_answer": "Microsoft reported total revenue of $56.2 billion in Q4 fiscal 2023, an increase of 8% year over year.",
+    "relevant_document_ids": ["doc_001"],
+    "documents": {
+      "doc_001": {
+        "content": "Microsoft today announced results for the quarter ended June 30, 2023. Revenue was $56.2 billion and increased 8% year over year. Operating income was $24.3 billion, up 18%. Net income was $20.1 billion, up 20%. Diluted earnings per share was $2.69, up 21%. Microsoft Cloud quarterly revenue was $30.3 billion, up 21% year over year.",
+        "is_distractor": false
+      },
+      "doc_002": {
+        "content": "For the full fiscal year ended June 30, 2023, Microsoft reported total revenue of $211.9 billion, an increase of 7% year over year. Annual operating income was $88.5 billion on a GAAP basis, up 6% from the prior fiscal year. Diluted EPS for the full year was $9.68 on a GAAP basis.",
+        "is_distractor": true
+      },
+      "doc_003": {
+        "content": "Microsoft Q3 fiscal 2023 revenue was $52.9 billion, up 7% year over year. Intelligent Cloud revenue was $22.1 billion, up 16%. Productivity and Business Processes revenue was $17.5 billion, up 11%. More Personal Computing revenue was $13.3 billion, down 9% due to ongoing PC market weakness.",
+        "is_distractor": true
+      }
+    }
+  }
+]

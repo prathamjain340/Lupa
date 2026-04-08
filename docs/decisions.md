@@ -21,6 +21,12 @@ raw for programmatic access via .to_json().
 middle-ground number. P90 and P99 are preserved in raw["latency"]
 for users who care about tail latency behavior.
 
+## ADR-007 — loader uses importlib.resources not __file__
+**Decision:** Built-in dataset files located via importlib.resources.
+**Reason:** __file__ path construction breaks when the package is
+installed as a wheel or zip. importlib.resources works correctly
+in all installation contexts including pip install.
+
 ## ADR-006 — Evaluator owns the pipeline call loop, metrics receive cached outputs
 **Decision:** evaluator.py calls pipeline_fn once per example,
 records wall-clock time, caches (chunks, answer). Latency metric
