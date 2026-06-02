@@ -4,7 +4,7 @@
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
-![PyPI](https://img.shields.io/badge/pip%20install-rageval-orange)
+![PyPI](https://img.shields.io/badge/pip%20install-lupa--rageval-orange)
 
 ---
 
