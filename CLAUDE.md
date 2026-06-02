@@ -97,18 +97,20 @@ with helpful messages, not silent failures.
 ---
 
 ## Current build stage
-Week 3 — comparison mode + full datasets
+Week 4 — dataset generator + benchmark + README + PyPI
 
 Week 1 complete — 14/14 tests passing.
-Week 2 complete — 27/27 tests passing. All 4 metrics working.
+Week 2 complete — 27/27 tests passing.
+Week 3 complete — 34/34 tests passing.
 
 Next files to build in order:
-1. comparison.py — compare() function + ComparisonReport object
-2. examples/compare_pipelines.py — working example
-3. tests/test_comparison.py — pytest suite for comparison mode
-4. Full datasets (financialqa.json, technicaldocs.json, 
-   general.json) — 75 examples each (defer to Week 4 
-   if time is short, mini dataset is sufficient for now)
+1. rageval/datasets/generator.py — generate_dataset() utility
+2. examples/custom_dataset.py — working example
+3. scratch/benchmark_pipeline.py — minimal RAG pipeline 
+   for real benchmark numbers (NOT committed to repo)
+4. README.md — polished with real benchmark numbers
+5. pyproject.toml — finalized for PyPI publish
+6. docs/quickstart.md — installation and usage guide
 
 ---
 
