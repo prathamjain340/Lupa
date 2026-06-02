@@ -24,14 +24,21 @@ with tradeoffs and ask which I prefer.
 ---
 
 ## How we work
-- Read SPEC.md fully before starting any session
+- Read SPEC.md and docs/decisions.md fully before starting any session
 - Build one file at a time
 - Show me the complete file after writing it
 - Wait for my confirmation before moving to the next file
 - Add a comment block at the top of each non-trivial file explaining
   what it does and any decisions made in it
 - Write tests alongside implementation, not after
-- Commit after each working component with conventional commit format
+- After I confirm a file looks good:
+  1. Add the ADR entry to docs/decisions.md if a decision was made
+  2. Run: git add <confirmed file> docs/decisions.md
+  3. Run: git commit -m "feat/test/fix: <descriptive message>"
+  4. Then and only then move to the next step
+- Never commit a file I have not explicitly confirmed
+- Never batch multiple files into one commit
+- One confirmed file = one commit
 
 ---
 
@@ -90,19 +97,25 @@ with helpful messages, not silent failures.
 ---
 
 ## Current build stage
-Week 1 — build in this exact order:
+Week 3 — comparison mode + full datasets
 
-1. Full folder structure (stubs for Week 2+ files)
-2. Results object — report.py
-3. latency metric — metrics/latency.py
-4. Dataset loader — datasets/loader.py
-5. financialqa_mini.json — 10 examples (I will provide these)
-6. retrieval_precision metric — metrics/retrieval.py
-7. evaluator.py — wires everything together
-8. examples/basic_eval.py
-9. tests/test_metrics.py
+Week 1 complete — 14/14 tests passing.
+Week 2 complete — 27/27 tests passing. All 4 metrics working.
 
-Do not start Week 2 files until I say so.
+Next files to build in order:
+1. comparison.py — compare() function + ComparisonReport object
+2. examples/compare_pipelines.py — working example
+3. tests/test_comparison.py — pytest suite for comparison mode
+4. Full datasets (financialqa.json, technicaldocs.json, 
+   general.json) — 75 examples each (defer to Week 4 
+   if time is short, mini dataset is sufficient for now)
+
+---
+
+## Decision log
+After every architectural decision, append it to docs/decisions.md
+in the ADR format already established there. Do not ask whether to
+log it — always log it.
 
 ---
 
