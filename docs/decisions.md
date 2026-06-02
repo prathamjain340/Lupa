@@ -70,3 +70,12 @@ sentence-transformers with model cross-encoder/nli-deberta-v3-small.
 directly — more accurate for entailment than bi-encoder similarity.
 DeBERTa-v3-small is ~180MB, fast on CPU, and sufficient for
 sentence-level faithfulness scoring without requiring GPU.
+
+## ADR-010 — answer_relevance uses BERTScore F1 with distilbert-base-uncased
+**Decision:** Answer relevance scored using BERTScore F1 between
+query and answer. Model: distilbert-base-uncased.
+**Reason:** F1 balances precision (answer covers query) and recall
+(query terms present in answer). distilbert is faster than
+bert-base with acceptable accuracy for relevance scoring.
+BERTScore handles semantic similarity better than exact keyword
+matching for natural language answers.
