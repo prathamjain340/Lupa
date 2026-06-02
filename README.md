@@ -16,7 +16,7 @@ they don't know if it's retrieval or generation. Lupa tells you exactly where.
 ## Install
 
 ```bash
-pip install rageval
+pip install lupa-rageval
 ```
 
 ---
