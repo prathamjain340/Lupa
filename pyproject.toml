@@ -3,8 +3,8 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rageval"
-version = "0.1.0"
+name = "lupa-rageval"
+version = "0.1.1"
 description = "Framework-agnostic RAG evaluation library — fully local, no LLM API required"
 readme = "README.md"
 license = {text = "MIT"}
