@@ -65,7 +65,7 @@ if __name__ == "__main__":
     results = rageval.evaluate(
         pipeline_fn=mock_pipeline,
         dataset="rageval-financialqa-mini",
-        metrics=["latency", "retrieval_precision"],
+        metrics=["retrieval_precision", "faithfulness", "answer_relevance", "latency"],
         threshold=0.5,
     )
 
