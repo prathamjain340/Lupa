@@ -62,3 +62,11 @@ failed. Showing which chunks were actually retrieved lets users
 immediately see wrong-quarter or wrong-metric distractor problems.
 Chunks truncated to 80 chars in .report() table, full content in
 .to_json().
+
+## ADR-009 — NLI model is cross-encoder/nli-deberta-v3-small
+**Decision:** Faithfulness evaluation uses CrossEncoder from
+sentence-transformers with model cross-encoder/nli-deberta-v3-small.
+**Reason:** CrossEncoder NLI models score premise-hypothesis pairs
+directly — more accurate for entailment than bi-encoder similarity.
+DeBERTa-v3-small is ~180MB, fast on CPU, and sufficient for
+sentence-level faithfulness scoring without requiring GPU.
