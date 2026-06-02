@@ -89,3 +89,13 @@ is the only inverted metric.
 relevance) are scored 0-1 where higher is better. Latency is
 in seconds where lower is better. Treating them the same way
 would flag latency improvements as regressions.
+
+## ADR-012 — generate_dataset uses LLM to create questions and distractors from source documents
+**Decision:** Dataset generation prompts the LLM to produce
+question-answer pairs AND distractor documents from the same
+source material.
+**Reason:** Hand-crafting datasets is time-consuming and
+doesn't scale. LLM-generated distractors from the same
+source document are more realistic than random distractors
+because they contain plausible but incorrect details from
+the actual domain.
