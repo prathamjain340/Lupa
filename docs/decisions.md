@@ -79,3 +79,13 @@ query and answer. Model: distilbert-base-uncased.
 bert-base with acceptable accuracy for relevance scoring.
 BERTScore handles semantic similarity better than exact keyword
 matching for natural language answers.
+
+## ADR-011 — Latency direction is inverted for regression detection
+**Decision:** For latency, lower is better. A latency increase
+triggers a regression warning. For all other metrics, higher
+is better. Direction is determined by metric name — "latency"
+is the only inverted metric.
+**Reason:** All quality metrics (precision, faithfulness,
+relevance) are scored 0-1 where higher is better. Latency is
+in seconds where lower is better. Treating them the same way
+would flag latency improvements as regressions.
