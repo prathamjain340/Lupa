@@ -23,11 +23,13 @@ import time
 from typing import Any, Callable
 
 from rageval.datasets.loader import load_dataset
+from rageval.metrics.faithfulness import compute_faithfulness
 from rageval.metrics.latency import compute_latency
+from rageval.metrics.relevance import compute_answer_relevance
 from rageval.metrics.retrieval import compute_retrieval_precision
 from rageval.report import Results
 
-_SUPPORTED_METRICS = {"latency", "retrieval_precision"}
+_SUPPORTED_METRICS = {"latency", "retrieval_precision", "faithfulness", "answer_relevance"}
 
 
 def evaluate(
@@ -93,6 +95,16 @@ def evaluate(
 
     if "retrieval_precision" in metrics:
         result = compute_retrieval_precision(examples, pipeline_outputs, threshold)
+        scores.update(result["scores"])
+        raw.update(result["raw"])
+
+    if "faithfulness" in metrics:
+        result = compute_faithfulness(examples, pipeline_outputs)
+        scores.update(result["scores"])
+        raw.update(result["raw"])
+
+    if "answer_relevance" in metrics:
+        result = compute_answer_relevance(examples, pipeline_outputs)
         scores.update(result["scores"])
         raw.update(result["raw"])
 
